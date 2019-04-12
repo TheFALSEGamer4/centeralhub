@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Complete Class Grade Calculator</title>
+		   <link rel="icon" href="https://game-website--thefalsegamer4.repl.co/icon.ico"/>
+	</head>
+	<body>
+		<script src="classnewcalc.js"></script>
+		<div><p>Summative Grade</p><input id="summative"></input></div>
+		<div><p>Formative Grade</p><input id="formative"></input></div>
+		<div><p>Exam Grade</p><input id="exam"></input></div>
+
+<button type="button" id="myBtn"onclick="myFunction()">Run</button>
+<p id="text"></p>
+<script>
+	document.getElementById("summative").focus();
+var input1 = document.getElementById("summative");
+input1.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("formative").focus();
+  }
+});
+var input2 = document.getElementById("formative");
+input2.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("exam").focus();
+  }
+});
+var input3 = document.getElementById("exam");
+input3.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+
+
+
+		<div style="float: right;"><button type="button" onclick="location.href='/'">Go Back</button></div>
+	</body>	
+</html>
