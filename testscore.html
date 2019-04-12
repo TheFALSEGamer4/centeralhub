@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test Score</title>
+		   <link rel="icon" href="https://game-website--thefalsegamer4.repl.co/icon.ico"/>
+	</head>
+	<body>
+		<script src="testnewscores.js"></script>
+		<div><p>How questions did you get right? </p><input id="testright" ></input></div>
+		<div><p>How many questions were there? </p><input id="testquestons"></input></div>
+
+
+<button id="myBtn" type="button" style="" onclick="myFunction()">Run</button>
+<p id="text"></p><div><button style="float: right;" type="button" onclick="location.href='/'">Go Back</button></div>
+<script>
+	document.getElementById("testright").focus();
+var input1 = document.getElementById("testright");
+input1.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("testquestons").focus();
+  }
+});
+var input2 = document.getElementById("testquestons");
+input2.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+	</body>	
+</html>
