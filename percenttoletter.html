@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Percent to Letter</title>
+		   <link rel="icon" href="https://game-website--thefalsegamer4.repl.co/icon.ico"/>
+	</head>
+	<body>
+		<script src="percenttolett.js"></script>
+		<div><p>Percentage  </p><input id="percent"></input></div>
+		<button type="button" id="myBtn" onclick="myFunction()">Run</button>
+
+<script>
+	document.getElementById("percent").focus();
+var input = document.getElementById("percent");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+<p id="text"></p><div><button style="float:right;" type="button" onclick="location.href='/'">Go Back</button></div>
+	</body>	
+</html>
