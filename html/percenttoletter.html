@@ -12,14 +12,14 @@
 		<button type="button" id="myBtn" onclick="myFunction()">Run</button>
 
 <script>
-	document.getElementById("percent").focus();
-var input = document.getElementById("percent");
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-   event.preventDefault();
-   document.getElementById("myBtn").click();
-  }
-});
+	var input = document.getElementById("percent");
+	input.focus();
+	input.addEventListener("keyup", function(event) {
+ 	if (event.keyCode === 13) {
+  		event.preventDefault();
+		document.getElementById("myBtn").click();
+  	}
+	});
 </script>
 <p id="text"></p><div><button style="float:right;" type="button" onclick="location.href='/'">Go Back</button></div>
 	</body>	
