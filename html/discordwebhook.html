@@ -9,9 +9,19 @@
 </head>
 
 <body>
-	<div id="content">
-		<iframe width="100%" height="100%" frameborder="0" src="https://heyehey.thefalsegamer4.repl.run/"></iframe>
-	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="newipinfo.js"></script>
+	<script src="discordwebhooks.js"></script>
+
+	<div>Discord URL: <input style="width: 60%" id="url"></input></div>
+	<div>Bot Name: <input style="width: 60%" id="name"></input></div>
+	<div>Message: <input style="width: 60%" id="message"></input></div>
+	<div>Bot Icon: <input style="width: 60%" id="icon"></input></div>
+
+	<button type="button" id="myBtn" onclick="postDataToWebhook()">Send</button>
+
+
+
 </body>
 
 </html>
