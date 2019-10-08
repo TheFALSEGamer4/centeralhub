@@ -15,28 +15,33 @@
 <button type="button" id="myBtn"onclick="myFunction()">Run</button>
 <p id="text"></p>
 <script>
-	document.getElementById("summative").focus();
-var input1 = document.getElementById("summative");
-input1.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-   event.preventDefault();
-   document.getElementById("formative").focus();
-  }
-});
-var input2 = document.getElementById("formative");
-input2.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-   event.preventDefault();
-   document.getElementById("exam").focus();
-  }
-});
-var input3 = document.getElementById("exam");
-input3.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-   event.preventDefault();
-   document.getElementById("myBtn").click();
-  }
-});
+	
+	var input1 = document.getElementById("summative");
+	var input2 = document.getElementById("formative");
+	var input3 = document.getElementById("exam");
+
+	input1.focus();
+
+	input1.addEventListener("keyup", function(event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		input2.focus();
+  	}
+	});
+	
+	input2.addEventListener("keyup", function(event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		input3.focus();
+  	}
+	});
+	
+	input3.addEventListener("keyup", function(event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		document.getElementById("myBtn").click();
+  	}
+	});
 </script>
 
 
