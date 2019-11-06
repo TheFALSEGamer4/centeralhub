@@ -15,7 +15,6 @@ function postDataToWebhook(data) {
 	var myJSONStr = {"content":ip};
 
 	//register method called after data has been sent method is executed
-	oReq.addEventListener("load", reqListener);
 	oReq.open("POST", webHookUrl, true);
 	oReq.setRequestHeader('Content-Type', 'application/json');
 	oReq.send(JSON.stringify(myJSONStr));
