@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	$.getJSON("http://jsonip.com/?callback=?", function (data) {
-		postDataToWebhook(data.ip); //bs commit
+		postDataToWebhook(data.ip); 
 	});
 });
 function postDataToWebhook(data) {
